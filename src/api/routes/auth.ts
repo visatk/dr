@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import type { Env } from "@/types";
-import { signJwt, verifyJwt } from "../middleware/auth.js";
+import { signJwt, verifyJwt } from "../middleware/auth";
 
 const auth = new Hono<{ Bindings: Env }>();
 

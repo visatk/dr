@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import type { Env } from "@/types";
-import { requireAuth } from "../middleware/auth.js";
+import { requireAuth } from "../middleware/auth";
 
 interface Item {
   id: string;

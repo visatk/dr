@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "cf-stack",
+  "name": "apiz",
   "compatibility_date": "2026-04-25",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./src/worker.ts",
   "assets": {
-    "directory": "./dist/client",
+    "directory": "./dist",
     "binding": "ASSETS"
   },
   // KV namespace for caching/sessions (create with: wrangler kv namespace create CACHE)
@@ -20,10 +20,6 @@
   // "r2_buckets": [
   //   { "binding": "UPLOADS", "bucket_name": "uploads" }
   // ],
-  "vars": {
-    "ENVIRONMENT": "development",
-    "API_VERSION": "v1"
-  },
   "observability": {
     "enabled": true,
     "head_sampling_rate": 1
